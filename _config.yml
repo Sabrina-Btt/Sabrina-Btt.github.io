@@ -1,1 +1,4 @@
 theme: jekyll-theme-merlot
+gem "github-pages", group: :jekyll_plugins
+
+title: As aventuras de Sabrina

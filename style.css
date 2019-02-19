@@ -1,9 +1,3 @@
-<head>
-<title>Loot Box</title>
-<link rel="shortcut icon" href="icone.ico" type="image/x-icon" />
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
 * {
   box-sizing: border-box;
 }
@@ -106,5 +100,3 @@ body {
     width: 100%;
   }
 }
-</style>
-</head>

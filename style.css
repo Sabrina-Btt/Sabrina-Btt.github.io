@@ -10,19 +10,14 @@ body {
 /* Header/Blog Title */
 .header {
   font-family: 'Poppins', sans-serif;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   background: #E8E8E8;
-}
-.header h1 {
-  /* font: Chilanka; */
-  font-size: 60px;
-  color: #660033;
 }
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #660033;
+  background-color: #be2d2d;
 }
 /* Style the topnav links */
 .topnav a {
@@ -35,7 +30,7 @@ body {
 }
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #bfbfbf;
+  background-color: #E8E8E8;
   color: black;
 }
 /* Create two unequal columns that floats next to each other */
@@ -76,7 +71,7 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background:  #660033;
+  background:  #be2d2d;
   margin-top: 20px;
   color: white;
   border-radius: 5px;
@@ -94,5 +89,6 @@ body {
   .topnav a {
     float: none;
     width: 100%;
+    height: 40px;
   }
 }

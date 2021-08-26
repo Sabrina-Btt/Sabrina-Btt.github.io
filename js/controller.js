@@ -1,6 +1,5 @@
 getAllPostPreviews();
 
-
 function getAllPostPreviews() {
     const token = '99889c4615df0998580db3ff4e7a24';
 
@@ -23,6 +22,9 @@ function getAllPostPreviews() {
                           url
                         }
                         description
+                        relatedpost {
+                          id
+                        }
                     }
                 }`
             }),
@@ -44,11 +46,12 @@ function getAllPostPreviews() {
 
 function renderPostPreviews(postPreviews) {
     postPreviews.map(elem => {
+        console.log(elem);
         let listPostPreviews = document.getElementById("featured");
         if (!listPostPreviews)
             return;
         let htmlInsert = `
-        <div class="card">
+        <div class="card" onclick="getPost(${elem.relatedpost.id})">
             <h2  style="font-weight:bold">${elem.title}</h2>
             <h5  style="font-weight:bold">${elem.subtitle}</h5>
             <div class="img"><img width="50%" style="border-radius: 10px;" src="${elem.image.url}"></div>
@@ -58,3 +61,10 @@ function renderPostPreviews(postPreviews) {
        listPostPreviews.insertAdjacentHTML('beforeend', htmlInsert)
     })
 }
+
+function getPost(id){
+    ///cookie aqui;
+    window.location.assign("../routes/post_page.html?id="+id);
+    
+ 
+ }

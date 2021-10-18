@@ -15,7 +15,7 @@ function getAllPostPreviews() {
             body: JSON.stringify({
                 query: `
                 {
-                    allPostpreviews(orderBy: _createdAt_ASC) {
+                    allPostpreviews(orderBy: _createdAt_DESC) {
                         title
                         subtitle
                         image {
@@ -54,7 +54,7 @@ function renderPostPreviews(postPreviews) {
         <div class="card" onclick="getPost(${elem.relatedpost.id})">
             <h2  style="font-weight:bold">${elem.title}</h2>
             <h5  style="font-weight:bold">${elem.subtitle}</h5>
-            <div class="img"><img width="50%" style="border-radius: 10px;" src="${elem.image.url}"></div>
+            <div class="img"><img class="post-img" src="${elem.image.url}"></div>
             <p>${elem.description}</p>
         </div>
         `
@@ -63,8 +63,7 @@ function renderPostPreviews(postPreviews) {
 }
 
 function getPost(id){
-    ///cookie aqui;
     window.location.assign("../routes/post_page.html?id="+id);
-    
  
- }
+}
+

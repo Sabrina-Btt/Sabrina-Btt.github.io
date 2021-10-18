@@ -17,7 +17,6 @@ function queryString(parameter) {
 }
 
 var id = queryString("id");
-console.log(id);
 
 getPostFromDB(id);
 
@@ -48,6 +47,9 @@ function getPostFromDB(id){
                           ... on TextRecord {
                             posttext
                           }
+                          ... on TitleRecord {
+                            posttitle
+                          }
                         }
                       }
                 }`
@@ -73,14 +75,17 @@ function getPostFromDB(id){
 function renderPosts(post){
     console.log(post[0].content)
     let renderPost = document.getElementById("featured");
-    console.log(renderPost)
     if (!renderPost)
             return;
     let htmlInsert = `
     <div class="card">
-        <h2  style="font-weight:bold">${post[0].titulo}</h2>
-        <h5  style="font-weight:bold">${post[0].content[1].posttext}</h5>
-        <div class="img"><img width="50%" style="border-radius: 10px;" src="${post[0].content[2].postimage.url}"></div>
+        <h1  style="font-weight:bold">${post[0].titulo}</h1>
+        <h3 style="font-weight:bold">${post[0].content[0].posttitle}</h3>
+        <p>${post[0].content[1].posttext}</p>
+        <div class="img-container">
+            <img class="post-img" src="${post[0].content[2].postimage.url}">
+        </div>
+        
     </div>
     `
     renderPost.insertAdjacentHTML('beforeend', htmlInsert)

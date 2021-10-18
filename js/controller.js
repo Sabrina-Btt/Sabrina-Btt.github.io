@@ -54,7 +54,7 @@ function renderPostPreviews(postPreviews) {
         <div class="card" onclick="getPost(${elem.relatedpost.id})">
             <h2  style="font-weight:bold">${elem.title}</h2>
             <h5  style="font-weight:bold">${elem.subtitle}</h5>
-            <div class="img"><img class="post-img" src="${elem.image.url}"></div>
+            <img class="post-img" src="${elem.image.url}">
             <p>${elem.description}</p>
         </div>
         `

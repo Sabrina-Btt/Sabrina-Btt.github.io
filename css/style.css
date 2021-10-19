@@ -78,6 +78,10 @@ footer {
   border-radius: 5px;
 }
 
+.rights{
+  text-align: center;
+}
+
 .img-container{
   display: flex;
   width: 100%;
@@ -91,6 +95,11 @@ footer {
   border-radius: 10px;
   cursor: pointer;
 }
+
+p{
+  text-align: justify;
+}
+
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   

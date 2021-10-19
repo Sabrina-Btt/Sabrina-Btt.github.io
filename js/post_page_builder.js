@@ -79,12 +79,13 @@ function renderPosts(post){
             return;
     let htmlInsert = `
     <div class="card">
-        <h1  style="font-weight:bold">${post[0].titulo}</h1>
-        <h3 style="font-weight:bold">${post[0].content[0].posttitle}</h3>
-        <p>${post[0].content[1].posttext}</p>
+        <h2  style="font-weight:bold">${post[0].titulo}</h2>
+        <h4 style="font-weight:bold">${post[0].content[0].posttitle}</h4>
         <div class="img-container">
-            <img class="post-img" src="${post[0].content[2].postimage.url}">
+            <img class="post-img" src="${post[0].content[1].postimage.url}">
         </div>
+        <p>${post[0].content[2].posttext}</p>
+        
         
     </div>
     `

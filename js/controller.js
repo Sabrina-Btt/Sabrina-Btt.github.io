@@ -15,7 +15,7 @@ function getAllPostPreviews() {
             body: JSON.stringify({
                 query: `
                 {
-                    allPostpreviews(orderBy: _createdAt_DESC) {
+                    allPostpreviews(orderBy: _createdAt_ASC) {
                         title
                         subtitle
                         image {
